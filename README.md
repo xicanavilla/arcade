@@ -1,6 +1,7 @@
 frontend-nanodegree-arcade-game
 ===============================
+1. Running the Arcade Game
+In order to run the arcade game. Open a browser and load the index.html file. The file will load with a game board, enemy bugs that cross horizontally and a player at the bottom of the screen.
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+2. Playing the Arcade Game
+The player in the form of a young boy is your game piece. Your objective is to cross the grassy area in order to make it to the magical river without hitting any of the enemy bugs that cross the forrest. In case that you touch a bug accidentally, you will be returned to the starting point where you can try again. The game ends once you reach the river in which case you can press the "replay" button in order to play again. 

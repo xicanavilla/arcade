@@ -22,22 +22,16 @@ var Engine = (function(global) {
         win = global.window,
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
-        lastTime;
-        id = win.requestAnimationFrame(main);
+        lastTime,
+        id;
 
     const modal = document.querySelector('.modal-bg');
-    const replay = document.querySelector('.modal-button');
+    const replay = document.querySelector('.modal-replay');
 
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
-    // replay.addEventListener('click', function () {
-    //   modal.classList.toggle('hide');
-    //   player.reset();
-    //   player.victory = false;
-    //   win.requestAnimationFrame(main);
-    // });
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -70,6 +64,7 @@ var Engine = (function(global) {
         if (player.victory === true) {
           win.cancelAnimationFrame(id);
           modal.classList.toggle('hide');
+          modal.classList.toggle('show');
         }
         else {
           id = win.requestAnimationFrame(main);
@@ -179,7 +174,15 @@ var Engine = (function(global) {
      * those sorts of things. It's only called once by the init() method.
      */
     function reset() {
-        // noop
+      // noop
+      replay.addEventListener('click', event =>{
+
+        modal.classList.toggle('hide');
+        player.reset();
+        player.victory = false;
+        win.requestAnimationFrame(main);
+
+      });
     }
 
     /* Go ahead and load all of the images we know we're going to need to

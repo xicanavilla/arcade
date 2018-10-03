@@ -1,3 +1,30 @@
 body {
     text-align: center;
 }
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  top: 25%;
+  left: 25%;
+  background: #ffffff;
+  transition: translate(-50%, -70%);
+}
+
+.modal-heading {
+  padding: 30px;
+}
+
+.hide {
+  display: none;
+}
