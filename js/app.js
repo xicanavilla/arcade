@@ -105,9 +105,9 @@ class Hero {
 //initialize a new Hero object
 const player = new Hero();
 const allEnemies = [
-  new Enemy(this.resetPos, 68, 200);
-  new Enemy(this.resetPos, 151, 325);
-  new Enemy(this.resetPos, 234, 300);
+  new Enemy(this.resetPos, 68, 200),
+  new Enemy(this.resetPos, 151, 325),
+  new Enemy(this.resetPos, 234, 300)
 ];
 
     // You should multiply any movement by the dt parameter
