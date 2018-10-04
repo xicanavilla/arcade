@@ -1,5 +1,5 @@
 // Enemies our player must avoid
-var Enemy = function(x, y, speed) {
+const Enemy = function(x, y, speed) {
   this.x = x;
   this.y = y;
   this.sprite = 'images/enemy-bug.png';
@@ -84,7 +84,7 @@ class Hero {
     //check collision
     for(let enemy of allEnemies) {
       //check if player and enemy collide
-      if (this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)) {
+      if (this.y === enemy.y && (enemy.x + enemy.step/1.45 > this.x && enemy.x < this.x + this.step/1.45)) {
         this.reset();
       }
     }
@@ -104,13 +104,11 @@ class Hero {
 
 //initialize a new Hero object
 const player = new Hero();
-const bug1 = new Enemy(this.resetPos, 68, 200);
-const bug2 = new Enemy(this.resetPos, 151, 325);
-const bug3 = new Enemy(this.resetPos, 234, 300);
-const allEnemies = [];
-allEnemies.push(bug1);
-allEnemies.push(bug2);
-allEnemies.push(bug3);
+const allEnemies = [
+  new Enemy(this.resetPos, 68, 200);
+  new Enemy(this.resetPos, 151, 325);
+  new Enemy(this.resetPos, 234, 300);
+];
 
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
